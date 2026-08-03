@@ -1,0 +1,4 @@
+node_module
+.next
+.vercel
+pnpm-lock.yaml
