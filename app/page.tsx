@@ -1,3 +1,9 @@
+import { Sidebar } from "./components/layout/sidebar/sidebar";
+
 export default function page() {
-  return <div>Portfolio Page</div>;
+  return (
+    <div>
+      <Sidebar />
+    </div>
+  );
 }
