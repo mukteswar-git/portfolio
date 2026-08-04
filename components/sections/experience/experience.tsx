@@ -5,10 +5,7 @@ import { EXPERIENCE } from "./experience.data";
 
 export function Experience() {
   return (
-    <Section
-      id="experience"
-      className="flex items-center"
-    >
+    <Section id="experience" className="flex items-center">
       <div className="space-y-12">
         <header className="space-y-6">
           <p className="text-xs font-semibold uppercase tracking-widest text-primary">
