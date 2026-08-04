@@ -27,9 +27,7 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
 
         <div className="space-y-6">
           <div className="space-y-3">
-            <p
-              className="text-sm font-medium text-muted-foreground"
-            >
+            <p className="text-sm font-medium text-muted-foreground">
               {project.subtitle}
             </p>
 
