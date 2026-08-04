@@ -1,11 +1,10 @@
-import Link from "next/link";
 import { NAV_LINKS } from "./navigation.data";
 
 export function Navigation() {
   return (
     <nav aria-label="Primary Navigation" className="space-y-2">
       {NAV_LINKS.map((link) => (
-        <Link
+        <a
           key={link.href}
           href={link.href}
           className="group flex items-center rounded-lg transition-all duration-300"
@@ -15,7 +14,7 @@ export function Navigation() {
           <span className="px-4 py-3 text-sm font-medium uppercase tracking-widest transition-colors duration-300 group-hover:text-primary">
             {link.label}
           </span>
-        </Link>
+        </a>
       ))}
     </nav>
   );
