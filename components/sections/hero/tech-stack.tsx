@@ -20,9 +20,7 @@ export function TechStack() {
           >
             <Icon className="size-5 text-muted-foreground transition-colors duration-300 group-hover:text-(--hover-color)" />
 
-            <span className="text-sm font-medium">
-              {tech.name}
-            </span>
+            <span className="text-sm font-medium">{tech.name}</span>
           </div>
         );
       })}

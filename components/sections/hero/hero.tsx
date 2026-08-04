@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
 
+import { Section } from "@/components/common/section";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -14,7 +15,7 @@ const ACTION_ICONS = {
 
 export function Hero() {
   return (
-    <section id="home" className="flex min-h-screen items-center">
+    <Section id="home" className="flex items-center" padded={false}>
       <div className="max-w-3xl space-y-8">
         <div className="space-y-6">
           <p className="text-base font-medium text-primary">{HERO.greeting}</p>
@@ -59,13 +60,15 @@ export function Hero() {
             );
           })}
         </div>
+
         <div className="space-y-3 pt-3">
           <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
             Tech Stack
           </p>
+
           <TechStack />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
