@@ -7,7 +7,7 @@ type SkillCategoryProps = {
 
 export function SkillCategory({ category }: SkillCategoryProps) {
   return (
-    <article className="h-full rounded-xl border bg-card p-5 sm:p-6">
+    <article className="h-full rounded-xl border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-6">
       <div className="space-y-5">
         <h3 className="text-lg font-semibold sm:text-xl">{category.title}</h3>
 

@@ -2,6 +2,7 @@ import { Credentials } from "./credentials";
 import { Navigation } from "./navigation/navigation";
 import { ProfilePhoto } from "./profile-photo";
 import { SocialLinks } from "./social-links";
+import { ThemeToggle } from "@/components/theme";
 
 export function Sidebar() {
   return (
@@ -15,7 +16,13 @@ export function Sidebar() {
           <Navigation />
         </div>
 
-        <SocialLinks />
+        <div className="space-y-3">
+          <div className="flex justify-center">
+            <ThemeToggle />
+          </div>
+
+          <SocialLinks />
+        </div>
       </div>
     </aside>
   );

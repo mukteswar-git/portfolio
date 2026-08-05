@@ -14,6 +14,8 @@ import {
 
 import { MobileNavigation } from "./sidebar/navigation/mobile-navigation";
 
+import { ThemeToggle } from "@/components/theme";
+
 export function MobileHeader() {
   const [open, setOpen] = useState(false);
 
@@ -22,17 +24,21 @@ export function MobileHeader() {
       <h1 className="font-heading text-lg font-semibold">Mukteswar</h1>
 
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetTrigger
-          render={
-            <Button
-              variant="ghost"
-              size="icon"
-              aria-label="Open navigation menu"
-            />
-          }
-        >
-          <Menu className="size-5" />
-        </SheetTrigger>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+
+          <SheetTrigger
+            render={
+              <Button
+                variant="ghost"
+                size="icon"
+                aria-label="Open navigation menu"
+              />
+            }
+          >
+            <Menu className="size-5" />
+          </SheetTrigger>
+        </div>
 
         <SheetContent side="right" className="w-[320px] p-0">
           <SheetHeader className="border-b px-6 py-5">

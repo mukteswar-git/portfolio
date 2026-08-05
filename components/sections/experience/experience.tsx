@@ -1,3 +1,4 @@
+import { Reveal } from "@/components/animations";
 import { Section } from "@/components/common/section";
 
 import { ExperienceCard } from "./experience-card";
@@ -7,22 +8,26 @@ export function Experience() {
   return (
     <Section id="experience" className="flex items-center">
       <div className="space-y-12">
-        <header className="space-y-6">
-          <p className="text-xs font-semibold uppercase tracking-widest text-primary">
-            {EXPERIENCE.badge}
-          </p>
+        <Reveal>
+          <header className="space-y-6">
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary">
+              {EXPERIENCE.badge}
+            </p>
 
-          <h2 className="font-heading max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
-            {EXPERIENCE.title}
-          </h2>
-        </header>
+            <h2 className="font-heading max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
+              {EXPERIENCE.title}
+            </h2>
+          </header>
+        </Reveal>
 
         <div className="max-w-5xl space-y-6">
-          {EXPERIENCE.items.map((experience) => (
-            <ExperienceCard
+          {EXPERIENCE.items.map((experience, index) => (
+            <Reveal
               key={`${experience.company}-${experience.role}`}
-              experience={experience}
-            />
+              delay={index * 0.1}
+            >
+              <ExperienceCard experience={experience} />
+            </Reveal>
           ))}
         </div>
       </div>
