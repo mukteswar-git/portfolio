@@ -4,7 +4,7 @@ import { TECH_STACK } from "./tech-stack.data";
 
 export function TechStack() {
   return (
-    <div className="flex flex-wrap gap-3">
+    <div className="flex flex-wrap gap-2 sm:gap-3">
       {TECH_STACK.map((tech) => {
         const Icon = tech.icon;
 
@@ -18,9 +18,9 @@ export function TechStack() {
               } as CSSProperties
             }
           >
-            <Icon className="size-5 text-muted-foreground transition-colors duration-300 group-hover:text-(--hover-color)" />
+            <Icon className="size-4 text-muted-foreground transition-colors duration-300 group-hover:text-(--hover-color) sm:size-5" />
 
-            <span className="text-sm font-medium">{tech.name}</span>
+            <span className="text-xs font-medium sm:text-sm">{tech.name}</span>
           </div>
         );
       })}

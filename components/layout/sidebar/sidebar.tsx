@@ -5,7 +5,7 @@ import { SocialLinks } from "./social-links";
 
 export function Sidebar() {
   return (
-    <aside className="sticky top-0 flex h-screen w-80 flex-col">
+    <aside className="sticky top-0 hidden h-screen w-80 flex-col lg:flex">
       <div className="flex flex-1 flex-col justify-between py-8">
         <div className="space-y-6">
           <ProfilePhoto />

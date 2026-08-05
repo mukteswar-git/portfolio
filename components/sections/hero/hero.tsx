@@ -18,22 +18,24 @@ export function Hero() {
     <Section id="home" className="flex items-center" padded={false}>
       <div className="max-w-3xl space-y-8">
         <div className="space-y-6">
-          <p className="text-base font-medium text-primary">{HERO.greeting}</p>
+          <p className="text-sm font-medium text-primary sm:text-base">
+            {HERO.greeting}
+          </p>
 
-          <h1 className="font-heading text-5xl font-bold tracking-tight xl:text-6xl">
+          <h1 className="font-heading text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
             {HERO.name}
           </h1>
 
-          <h2 className="text-3xl font-medium text-muted-foreground">
+          <h2 className="text-2xl font-medium text-muted-foreground sm:text-3xl">
             {HERO.title}
           </h2>
 
-          <p className="max-w-xl text-lg leading-8 text-muted-foreground">
+          <p className="max-w-xl text-base leading-8 text-muted-foreground sm:text-lg">
             {HERO.description}
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
           {HERO.actions.map((action) => {
             const Icon = ACTION_ICONS[action.icon];
 
@@ -52,9 +54,11 @@ export function Hero() {
                     variant: action.variant,
                     size: "lg",
                   }),
+                  "justify-center",
                 )}
               >
                 {action.label}
+
                 <Icon className="ml-2 size-4" />
               </Link>
             );

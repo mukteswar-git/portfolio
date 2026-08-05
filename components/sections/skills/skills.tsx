@@ -12,7 +12,7 @@ export function Skills() {
             {SKILLS.badge}
           </p>
 
-          <h2 className="font-heading max-w-3xl text-4xl font-bold tracking-tight">
+          <h2 className="font-heading max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
             {SKILLS.title}
           </h2>
         </header>

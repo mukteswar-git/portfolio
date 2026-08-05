@@ -17,16 +17,16 @@ export function Contact() {
             {CONTACT.badge}
           </p>
 
-          <h2 className="font-heading max-w-3xl text-4xl font-bold tracking-tight">
+          <h2 className="font-heading max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
             {CONTACT.title}
           </h2>
 
-          <p className="max-w-2xl leading-8 text-muted-foreground">
+          <p className="max-w-2xl text-base leading-8 text-muted-foreground">
             {CONTACT.description}
           </p>
         </header>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-4 lg:grid-cols-2 xl:grid-cols-3 xl:gap-6">
           <ContactCard
             title="Email"
             value={CONTACT.email}
@@ -42,10 +42,10 @@ export function Contact() {
           <ContactCard title="Location" value={CONTACT.location} />
         </div>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
           <Link
             href={`mailto:${CONTACT.email}`}
-            className={cn(buttonVariants({ size: "lg" }))}
+            className={cn(buttonVariants({ size: "lg" }), "justify-center")}
           >
             Send Email
             <ArrowUpRight className="ml-2 size-4" />
@@ -60,6 +60,7 @@ export function Contact() {
                 variant: "outline",
                 size: "lg",
               }),
+              "justify-center",
             )}
           >
             GitHub
@@ -74,6 +75,7 @@ export function Contact() {
                 variant: "outline",
                 size: "lg",
               }),
+              "justify-center",
             )}
           >
             LinkedIn

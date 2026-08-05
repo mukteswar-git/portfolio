@@ -6,14 +6,14 @@ type ContactCardProps = {
 
 export function ContactCard({ title, value, href }: ContactCardProps) {
   return (
-    <article className="rounded-xl border bg-card p-6">
+    <article className="rounded-xl border bg-card p-5 sm:p-6">
       <div className="space-y-2">
         <p className="text-sm font-medium text-primary">{title}</p>
 
         {href ? (
           <a
             href={href}
-            className="font-medium underline-offset-4 transition-colors hover:text-primary hover:underline focus-visible:underline"
+            className="break-word font-medium underline-offset-4 transition-colors hover:text-primary hover:underline focus-visible:underline"
           >
             {value}
           </a>

@@ -11,7 +11,8 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
         rounded-xl
         border
         bg-card
-        p-8
+        p-6
+        sm:p-8
         transition-all
         duration-300
         hover:border-primary/30
@@ -25,7 +26,9 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
           </p>
 
           <div>
-            <h3 className="text-xl font-semibold">{experience.role}</h3>
+            <h3 className="text-lg font-semibold sm:text-xl">
+              {experience.role}
+            </h3>
 
             <p className="text-sm text-muted-foreground">
               {experience.company}
@@ -35,8 +38,12 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
 
         <ul className="space-y-3">
           {experience.description.map((item) => (
-            <li key={item} className="flex gap-3 text-muted-foreground">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+            <li
+              key={item}
+              className="flex gap-3 text-sm leading-7 text-muted-foreground sm:text-base"
+            >
+              <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+
               <span>{item}</span>
             </li>
           ))}
@@ -44,7 +51,10 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
 
         <div className="flex flex-wrap gap-2">
           {experience.technologies.map((tech) => (
-            <span key={tech} className="rounded-full border px-3 py-1 text-sm">
+            <span
+              key={tech}
+              className="rounded-full border px-3 py-1 text-xs sm:text-sm"
+            >
               {tech}
             </span>
           ))}

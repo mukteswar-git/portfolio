@@ -12,7 +12,7 @@ export function Experience() {
             {EXPERIENCE.badge}
           </p>
 
-          <h2 className="font-heading max-w-3xl text-3xl font-bold tracking-tight lg:text-4xl">
+          <h2 className="font-heading max-w-3xl text-3xl font-bold tracking-tight sm:text-4xl">
             {EXPERIENCE.title}
           </h2>
         </header>

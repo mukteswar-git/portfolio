@@ -14,8 +14,8 @@ type FeaturedProjectProps = {
 
 export function FeaturedProject({ project }: FeaturedProjectProps) {
   return (
-    <article className="overflow-hidden rounded-2xl border bg-card p-8 hover:shadow-lg transition-all duration-300">
-      <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+    <article className="overflow-hidden rounded-2xl border bg-card p-6 transition-all duration-300 hover:shadow-lg sm:p-8">
+      <div className="grid gap-8 xl:grid-cols-[1.2fr_1fr] xl:items-center xl:gap-10">
         <div className="overflow-hidden rounded-xl shadow-lg ring-1 ring-border/50">
           <Image
             src={project.image}
@@ -31,9 +31,11 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
               {project.subtitle}
             </p>
 
-            <h3 className="font-heading text-3xl font-bold">{project.title}</h3>
+            <h3 className="font-heading text-2xl font-bold sm:text-3xl">
+              {project.title}
+            </h3>
 
-            <p className="leading-8 text-muted-foreground">
+            <p className="text-base leading-8 text-muted-foreground">
               {project.description}
             </p>
           </div>
@@ -41,8 +43,9 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
           <ul className="space-y-3">
             {project.features.map((feature) => (
               <li key={feature} className="flex items-center gap-3">
-                <Check className="size-4 text-primary" />
-                <span>{feature}</span>
+                <Check className="size-4 shrink-0 text-primary" />
+
+                <span className="text-sm sm:text-base">{feature}</span>
               </li>
             ))}
           </ul>
@@ -51,19 +54,19 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
             {project.technologies.map((technology) => (
               <span
                 key={technology}
-                className="rounded-full border px-3 py-1 text-sm"
+                className="rounded-full border px-3 py-1 text-xs sm:text-sm"
               >
                 {technology}
               </span>
             ))}
           </div>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
             <Link
               href={project.live}
               target="_blank"
               rel="noopener noreferrer"
-              className={cn(buttonVariants({ size: "lg" }))}
+              className={cn(buttonVariants({ size: "lg" }), "justify-center")}
             >
               Live Demo
               <ArrowUpRight className="ml-2 size-4" />
@@ -78,6 +81,7 @@ export function FeaturedProject({ project }: FeaturedProjectProps) {
                   variant: "outline",
                   size: "lg",
                 }),
+                "justify-center",
               )}
             >
               Source Code
