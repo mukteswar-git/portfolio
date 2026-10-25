@@ -22,6 +22,8 @@ export function Projects() {
 
           <FeaturedProject project={PROJECTS.featured} />
 
+          <FeaturedProject project={PROJECTS.teamAccessControl} />
+
           <Reveal>
             <MoreProjects />
           </Reveal>

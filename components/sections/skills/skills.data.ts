@@ -18,27 +18,28 @@ export const SKILLS = {
     },
     {
       title: "Backend",
-      skills: ["Node.js", "Express", "REST APIs"],
+      skills: ["Node.js", "Express", "REST APIs", "Zod"],
     },
     {
-      title: "Database",
-      skills: ["PostgreSQL"],
+      title: "Database & ORM",
+      skills: ["PostgreSQL", "Prisma ORM"],
     },
     {
-      title: "Tools",
+      title: "Testing",
+      skills: ["Jest", "Supertest"],
+    },
+    {
+      title: "Tools & Platforms",
       skills: [
         "Git",
         "GitHub",
-        "Figma",
+        "Docker",
         "Postman",
         "Vercel",
         "Linux",
         "VS Code",
+        "Figma",
       ],
-    },
-    {
-      title: "Currently Learning",
-      skills: ["Docker", "Prisma"],
     },
   ],
 } as const;

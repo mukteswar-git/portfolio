@@ -13,7 +13,7 @@ export const HERO = {
   name: "Mukteswar Tripathy",
   title: "Full-Stack Developer",
   description:
-    "I develop responsive and performant web applications using React, Next.js, TypeScript, Node.js, and PostgreSQL, with a focus on clean architecture and user-centric design.",
+    "I build modern, responsive web applications using React, Next.js, TypeScript, and Node.js. I focus on clean architecture, reliable APIs, and turning ideas into practical software.",
 
   actions: [
     {

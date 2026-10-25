@@ -16,9 +16,9 @@ export function MoreProjects() {
           </h3>
 
           <p className="max-w-3xl text-base leading-8 text-muted-foreground">
-            While ClashLens is my flagship project, I continuously build smaller
-            applications, UI experiments, and learning projects. Explore my
-            GitHub to see my development journey and ongoing work.
+            Explore more of my development work, including additional
+            applications, experiments, and projects that demonstrate my approach
+            to software engineering.
           </p>
         </div>
 

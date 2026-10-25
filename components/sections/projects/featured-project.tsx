@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { PROJECTS } from "./projects.data";
 
 type FeaturedProjectProps = {
-  project: typeof PROJECTS.featured;
+  project: typeof PROJECTS.featured | typeof PROJECTS.teamAccessControl;
 };
 
 export function FeaturedProject({ project }: FeaturedProjectProps) {
