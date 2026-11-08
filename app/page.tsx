@@ -7,6 +7,7 @@ import { Skills } from "@/components/sections/skills";
 import { Contact } from "@/components/sections/contact";
 import { MobileHeader } from "@/components/layout/mobile-header";
 import { Footer } from "@/components/layout/footer";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function HomePage() {
   return (
@@ -25,6 +26,7 @@ export default function HomePage() {
           <Footer />
         </main>
       </div>
+      <Analytics />
     </>
   );
 }
